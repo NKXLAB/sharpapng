@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{470A9164-29CA-4C02-8DA5-13C9A766A4FE}</ProjectGuid>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>apng</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <CompileAsManaged>false</CompileAsManaged>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\zlib\adler32.c" />
+    <ClCompile Include="..\..\zlib\compress.c" />
+    <ClCompile Include="..\..\zlib\crc32.c" />
+    <ClCompile Include="..\..\zlib\deflate.c" />
+    <ClCompile Include="..\..\zlib\example.c" />
+    <ClCompile Include="..\..\zlib\gzclose.c" />
+    <ClCompile Include="..\..\zlib\gzlib.c" />
+    <ClCompile Include="..\..\zlib\gzread.c" />
+    <ClCompile Include="..\..\zlib\gzwrite.c" />
+    <ClCompile Include="..\..\zlib\infback.c" />
+    <ClCompile Include="..\..\zlib\inffast.c" />
+    <ClCompile Include="..\..\zlib\inflate.c" />
+    <ClCompile Include="..\..\zlib\inftrees.c" />
+    <ClCompile Include="..\..\zlib\trees.c" />
+    <ClCompile Include="..\..\zlib\uncompr.c" />
+    <ClCompile Include="..\..\zlib\zutil.c" />
+    <ClCompile Include="apng.cpp" />
+    <ClCompile Include="lapng143\png.c" />
+    <ClCompile Include="lapng143\pngerror.c" />
+    <ClCompile Include="lapng143\pngget.c" />
+    <ClCompile Include="lapng143\pngmem.c" />
+    <ClCompile Include="lapng143\pngpread.c" />
+    <ClCompile Include="lapng143\pngread.c" />
+    <ClCompile Include="lapng143\pngrio.c" />
+    <ClCompile Include="lapng143\pngrtran.c" />
+    <ClCompile Include="lapng143\pngrutil.c" />
+    <ClCompile Include="lapng143\pngset.c" />
+    <ClCompile Include="lapng143\pngtrans.c" />
+    <ClCompile Include="lapng143\pngwio.c" />
+    <ClCompile Include="lapng143\pngwrite.c" />
+    <ClCompile Include="lapng143\pngwtran.c" />
+    <ClCompile Include="lapng143\pngwutil.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lapng143\png.h" />
+    <ClInclude Include="lapng143\pngconf.h" />
+    <ClInclude Include="lapng143\pngpriv.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
